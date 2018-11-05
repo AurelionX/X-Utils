@@ -1,2 +1,18 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="me.aurelion.x.utils" />
+    package="me.aurelion.x.utils">
+
+    <application>
+        <provider
+            android:name=".Utils$FileProvider4XUtil"
+            android:authorities="${applicationId}.x_utils.provider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            android:multiprocess="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/x_provider_paths" />
+        </provider>
+    </application>
+
+
+</manifest>
