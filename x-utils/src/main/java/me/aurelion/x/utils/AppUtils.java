@@ -136,6 +136,7 @@ public final class AppUtils {
             intent.setComponent(cn);
             Uri uri = Uri.parse(activityName);
             intent.setData(uri);
+            //  intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(intent);
             return true;
         } catch (Exception e) {
