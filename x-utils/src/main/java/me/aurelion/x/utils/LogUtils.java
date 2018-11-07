@@ -11,6 +11,7 @@ import android.util.Log;
 public final class LogUtils {
 
     private static String Tag = "X-Log";
+    private static final boolean DEBUG = AppUtils.isDebug();
 
     private LogUtils() {
         throw new UnsupportedOperationException("No instantiate " + getClass().getSimpleName());
@@ -26,42 +27,62 @@ public final class LogUtils {
     }
 
     public static void e(String msg) {
-        Log.e(Tag, msg);
+        if (DEBUG) {
+            Log.e(Tag, msg);
+        }
     }
 
     public static void e(String tag, String msg) {
-        Log.e(tag, msg);
+        if (DEBUG) {
+            Log.e(tag, msg);
+        }
     }
 
     public static void w(String msg) {
-        Log.w(Tag, msg);
+        if (DEBUG) {
+            Log.w(Tag, msg);
+        }
     }
 
     public static void w(String tag, String msg) {
-        Log.w(tag, msg);
+        if (DEBUG) {
+            Log.w(tag, msg);
+        }
     }
 
     public static void i(String msg) {
-        Log.i(Tag, msg);
+        if (DEBUG) {
+            Log.i(Tag, msg);
+        }
     }
 
     public static void i(String tag, String msg) {
-        Log.i(tag, msg);
+        if (DEBUG) {
+            Log.i(tag, msg);
+        }
     }
 
     public static void d(String msg) {
-        Log.d(Tag, msg);
+        if (DEBUG) {
+            Log.d(Tag, msg);
+        }
     }
 
     public static void d(String tag, String msg) {
-        Log.d(tag, msg);
+        if (DEBUG) {
+            Log.d(tag, msg);
+        }
     }
 
     public static void v(String msg) {
-        Log.v(Tag, msg);
+        if (DEBUG) {
+            Log.v(Tag, msg);
+        }
     }
 
     public static void v(String tag, String msg) {
-        Log.v(tag, msg);
+        if (DEBUG) {
+            Log.v(tag, msg);
+        }
     }
 }

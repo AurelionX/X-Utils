@@ -35,7 +35,7 @@ public class Utils {
     public static void init(@NonNull final Application app) {
         if (APPLICATION == null) {
             APPLICATION = app;
-            APPLICATION.registerActivityLifecycleCallbacks(ACTIVITY_LIFECYCLE);
+            APPLICATION.registerActivityLifecycleCallbacks(getActivityLifecycle());
         }
     }
 
