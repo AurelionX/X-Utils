@@ -101,7 +101,7 @@ public final class IntentUtils {
         if (image == null || !image.isFile()) {
             return null;
         }
-        return getShareImageIntent(content, UriUtils.file2Uri(image), isNewTask);
+        return getShareImageIntent(content, ConvertUtils.file2Uri(image), isNewTask);
     }
 
     /**
@@ -180,7 +180,7 @@ public final class IntentUtils {
             if (!image.isFile()) {
                 continue;
             }
-            uris.add(UriUtils.file2Uri(image));
+            uris.add(ConvertUtils.file2Uri(image));
         }
         return getShareImageIntent(content, uris, isNewTask);
     }
